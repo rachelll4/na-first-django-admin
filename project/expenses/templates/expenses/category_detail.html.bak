@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head></head>
+  <body>
+    <h1>House Office Expenses - {{ category.name|title }}</h1>
+
+    <p>Summary records: {{ summary_count }}</p>
+	<p>Peek at the greatest amounts in this category:</p>
+	<ul>
+		{% for summary in top_five_summaries %}
+		<li>{{ summary.office|title }} - {{ summary.currency }}</li>
+		{% endfor %}
+	</ul>
+    <p>Detail records: {{ category_detail }}</p>
+
+  </body>
+</html>
